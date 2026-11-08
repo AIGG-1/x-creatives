@@ -12,3 +12,4 @@ Every change is saved as its own branch `version/vN`, so any version can be rest
 | v2 | Banners no longer full-width: shown as tilted ad cards beside text (hero: headline + CAC banner; content: LTV banner + list). |
 | v3 | New "Why it passes review" funnel block (ad → landing → product → subscription); services, process and hero copy now mention creative + landing bundles. |
 | v4 | Approach block reworked into a "black box" (you bring → locked bundle → you get): shows results, not the method. Method hints removed from services and process. |
+| v5 | Numbers block → "Two roles · one person": creative producer (CAC $10–25, 5,000+, 5 sources) and content creator (LTV from $70, hyper-real characters, 18+). Hero kicker, intro and logo mention both roles. |

@@ -152,6 +152,22 @@ h2{font-weight:900;font-size:clamp(34px,4.6vw,58px);line-height:1.08;letter-spac
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .chips span{font-size:13px;font-weight:700;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
 
+/* roles */
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.role{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:22px}
+.role.b{background:linear-gradient(160deg,rgba(255,45,149,.14),var(--card) 55%)}
+.role-h{display:flex;align-items:center;gap:14px}
+.role-n{width:46px;height:46px;border-radius:14px;background:var(--pink);display:grid;place-items:center;font-weight:900;font-size:16px;box-shadow:0 8px 24px var(--glow);flex:none}
+.role-h b{display:block;font-weight:900;font-size:24px;line-height:1.1}
+.role-h small{font-size:13px;font-weight:700;color:var(--pink2);letter-spacing:.06em;text-transform:uppercase}
+.role-big .v{font-weight:900;font-size:52px;line-height:1;letter-spacing:-.03em;display:inline-block;margin-bottom:10px}
+.role-big p{color:var(--mute);font-size:16px}
+.role-s{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:auto}
+.role-s div{padding:16px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.role-s b{display:block;font-weight:900;font-size:24px;margin-bottom:4px}
+.role-s span{font-size:13px;color:var(--mute);line-height:1.4;display:block}
+@media (max-width:900px){.roles{grid-template-columns:1fr}}
+@media (max-width:760px){.role{padding:22px;border-radius:22px}.role-big .v{font-size:40px}.role-s{grid-template-columns:1fr}}
 /* numbers */
 .nums{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
 .num{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px 24px 26px;position:relative;overflow:hidden}
@@ -314,8 +330,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <header>
   <div class="wrap">
-    <a href="#top" class="logo"><i>♥</i><span class="ph">[Name]</span><small>· Creative Producer, AI Girlfriend</small></a>
-    <nav><a href="#numbers">Numbers</a><a href="#services">Services</a><a href="#funnel">Approach</a><a href="#cases">Cases</a><a href="#work">Work</a><a href="#private">18+</a></nav>
+    <a href="#top" class="logo"><i>♥</i><span class="ph">[Name]</span><small>· Creative Producer &amp; Content Creator</small></a>
+    <nav><a href="#numbers">Roles</a><a href="#services">Services</a><a href="#funnel">Approach</a><a href="#cases">Cases</a><a href="#work">Work</a><a href="#private">18+</a></nav>
     <a class="btn sm" href="https://t.me/your_handle" target="_blank" rel="noopener"><svg class="tg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.8c.9-.3 1.6.2 1.4 1.5z"/></svg><span>Telegram</span></a>
   </div>
 </header>
@@ -324,9 +340,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-txt">
-      <div class="k">Creative producer · AI girlfriend</div>
+      <div class="k">Creative producer &amp; content creator · AI girlfriend</div>
       <h1>Ads for AI girlfriends that <span class="hl">pass review</span> and <span class="pk">pay back</span></h1>
-      <p class="sub">Hey, I'm <strong class="ph">[Name]</strong>. I build creative + landing bundles for AI-adult and AI girlfriend products — from the first ad to the paid subscription — approved by moderation and built to convert.</p>
+      <p class="sub">Hey, I'm <strong class="ph">[Name]</strong>. I build creative + landing bundles for AI-adult and AI girlfriend products — from the first ad to the paid subscription — approved by moderation and built to convert. And I create the hyper-realistic content users keep paying for.</p>
       <div class="ctas">
         <a class="btn" href="https://t.me/your_handle" target="_blank" rel="noopener"><svg class="tg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.8c.9-.3 1.6.2 1.4 1.5z"/></svg>Message me</a>
         <a class="btn ghost" href="#work">See the work</a>
@@ -347,17 +363,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <section id="numbers" style="padding-top:20px">
   <div class="wrap">
-    <div class="k">Numbers</div>
-    <h2>Measured in <span class="pk">paying subscribers</span>, not likes.</h2>
-    <div class="nums">
-      <div class="num"><span class="l">CAC</span><span class="v hl">$10–25</span><p>average cost per user who bought a subscription</p></div>
-      <div class="num"><span class="l">LTV</span><span class="v">from $70</span><p>lifetime value of users who came through my content</p></div>
-      <div class="num"><span class="l">Volume</span><span class="v">5,000+</span><p>creatives made by me personally — statics and video</p></div>
-      <div class="num"><span class="l">Sources</span><span class="v">5</span><p>Meta, Google, TikTok, native and teaser networks — mainstream & adult</p></div>
+    <div class="k">Two roles · one person</div>
+    <h2>I bring users in <span class="pk">and</span> make them <span class="hl">pay more</span></h2>
+    <p class="lead">I work on both sides of the money: as a creative producer I make the ads that buy paying users, and as a content creator I make the content they keep paying for.</p>
+    <div class="roles">
+      <div class="role">
+        <div class="role-h"><span class="role-n">01</span><div><b>Creative producer</b><small>Ads that buy users</small></div></div>
+        <div class="role-big"><span class="v hl">$10–25</span><p>CAC per user who bought a subscription</p></div>
+        <div class="role-s">
+          <div><b>5,000+</b><span>creatives made by me personally — statics and video</span></div>
+          <div><b>5</b><span>sources: Meta, Google, TikTok, native, teaser — mainstream & adult</span></div>
+        </div>
+      </div>
+      <div class="role b">
+        <div class="role-h"><span class="role-n">02</span><div><b>Content creator</b><small>Content that sells</small></div></div>
+        <div class="role-big"><span class="v hl">from $70</span><p>LTV of a paying user</p></div>
+        <div class="role-s">
+          <div><b>Hyper-real</b><span>characters people believe in — that's why the content sells</span></div>
+          <div><b>18+</b><span>private content and AI series, shown on request</span></div>
+        </div>
+      </div>
     </div>
     <div class="ratio">
       <div class="x">2.8×<span class="pk">+</span></div>
-      <p><b>LTV to CAC, even at the worst end.</b> $70 minimum LTV ÷ $25 maximum CAC = 2.8. At the best end it's 7×.</p>
+      <p><b>LTV to CAC when both roles are mine.</b> $70 minimum LTV ÷ $25 maximum CAC = 2.8. At the best end it's 7×.</p>
     </div>
   </div>
 </section>
