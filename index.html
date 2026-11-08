@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creative Producer · AI Girlfriend & AI Companion</title>
+<meta name="description" content="Creative producer for AI girlfriend and AI companion products. Creatives with $10–25 CAC per paying subscriber, content with LTV from $70, 5,000+ creatives made personally.">
+<meta property="og:title" content="Creatives that actually work · CAC $10–25">
+<meta property="og:description" content="Creative producer for AI girlfriend products. Content people pay for — LTV from $70. 5,000+ creatives.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23ff2d95'/%3E%3Cpath d='M16 24s-7.5-4.5-7.5-9.6A4 4 0 0 1 16 12.3a4 4 0 0 1 7.5 2.1C23.5 19.5 16 24 16 24z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#120a12; --bg2:#1b111b; --card:#1f1420; --line:#33233a;
+  --ink:#fff; --mute:#bba9bf; --pink:#ff2d95; --pink2:#ff6ec4; --glow:rgba(255,45,149,.55);
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:500 17px/1.55 Montserrat,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:radial-gradient(60vmax 50vmax at 100% 0,rgba(255,45,149,.16),transparent 60%),radial-gradient(50vmax 50vmax at 0 100%,rgba(140,40,160,.14),transparent 60%)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+/* placeholders: visible on purpose until real data arrives */
+.ph{outline:2px dashed rgba(255,110,196,.8);outline-offset:3px;border-radius:4px}
+
+/* ===== thumbnail toolkit ===== */
+.hl{display:inline-block;background:var(--pink);color:#fff;padding:.02em .32em .1em;border-radius:.28em;transform:rotate(-2deg);box-shadow:0 8px 30px var(--glow)}
+.pk{color:var(--pink2);text-shadow:0 0 28px rgba(255,45,149,.6)}
+.swoosh{display:block;height:.42em;width:100%;margin-top:-.06em}
+.swoosh path{fill:none;stroke:var(--pink);stroke-width:7;stroke-linecap:round;filter:drop-shadow(0 0 8px var(--pink))}
+.neon{display:inline-flex;align-items:center;gap:.3em;padding:.22em .62em;border-radius:.5em;border:3px solid var(--pink2);background:rgba(20,8,20,.72);box-shadow:0 0 22px var(--glow),inset 0 0 18px rgba(255,45,149,.25);font-weight:900;white-space:nowrap}
+.neon b{color:var(--pink2)}
+.burst{position:relative;display:inline-block}
+.burst::before,.burst::after{content:"";position:absolute;width:.7em;height:.7em;top:50%;transform:translateY(-50%);
+  background:linear-gradient(var(--pink2),var(--pink2)) 50% 0/3px 32% no-repeat,linear-gradient(var(--pink2),var(--pink2)) 0 50%/32% 3px no-repeat,linear-gradient(var(--pink2),var(--pink2)) 50% 100%/3px 32% no-repeat;filter:drop-shadow(0 0 4px var(--pink))}
+.burst::before{left:-.85em}
+.burst::after{right:-.85em;transform:translateY(-50%) scaleX(-1)}
+.shadow{text-shadow:0 3px 0 rgba(0,0,0,.25),0 8px 28px rgba(0,0,0,.45)}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(18,10,18,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:18px}
+.logo{font-weight:800;font-size:15px;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.logo i{width:30px;height:30px;border-radius:9px;background:var(--pink);display:grid;place-items:center;font-style:normal;font-size:15px;box-shadow:0 0 18px var(--glow)}
+.logo small{font-weight:600;color:var(--mute);font-size:13px}
+nav{display:flex;gap:26px;font-size:14px;font-weight:600;color:var(--mute)}
+nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;background:var(--pink);color:#fff;font-weight:800;font-size:16px;box-shadow:0 10px 34px var(--glow);transition:transform .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px) scale(1.02)}
+.btn.ghost{background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.18);box-shadow:none}
+.btn.sm{padding:10px 18px;font-size:14px}
+.tg{width:18px;height:18px;flex:none}
+
+/* sections */
+section{padding:100px 0}
+.k{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--pink2);margin-bottom:18px}
+.k::before{content:"";width:22px;height:4px;border-radius:4px;background:var(--pink);box-shadow:0 0 10px var(--pink)}
+h2{font-weight:900;font-size:clamp(34px,4.6vw,58px);line-height:1.08;letter-spacing:-.02em;max-width:900px;margin-bottom:20px}
+.lead{color:var(--mute);max-width:660px;font-size:18px}
+
+/* ===== banners ===== */
+.bnr{border-radius:28px;overflow:hidden;box-shadow:0 40px 100px -40px var(--glow);border:1px solid var(--line)}
+.bnr img{width:100%;height:auto}
+@media (max-width:760px){.bnr{border-radius:18px;margin:0 -4px}}
+.banner{position:relative;border-radius:30px;overflow:hidden;min-height:600px;display:flex;align-items:center;box-shadow:0 40px 100px -40px var(--glow);isolation:isolate;background:#2a1a24}
+.banner .photo{position:absolute;top:0;bottom:0;width:58%;height:100%;object-fit:cover;z-index:-2}
+.banner.r .photo{right:0;object-position:30% 25%}
+.banner.l .photo{left:0;object-position:60% 20%}
+.banner::before{content:"";position:absolute;inset:0;z-index:-1}
+.banner.r::before{background:linear-gradient(90deg,#140a12 0%,#1c0d18 40%,rgba(28,13,24,.6) 50%,rgba(28,13,24,0) 64%)}
+.banner.l::before{background:linear-gradient(270deg,#140a12 0%,#1c0d18 40%,rgba(28,13,24,.6) 50%,rgba(28,13,24,0) 64%)}
+.banner .txt{position:relative;width:52%;padding:56px 0 56px 60px}
+.banner.l .txt{margin-left:auto;padding:56px 60px 56px 0;text-align:right}
+.banner .big{font-weight:900;font-size:clamp(46px,5.6vw,82px);line-height:1.04;letter-spacing:-.025em}
+.banner .big .hl{margin:.06em 0}
+.banner .sw{display:block;width:88%;margin:.05em 0 .28em}
+.banner.l .sw{margin-left:auto}
+.banner .metric{font-size:clamp(28px,3.2vw,46px);margin-top:.3em;letter-spacing:-.01em}
+.banner .cap{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-top:22px}
+.banner .tag{position:absolute;top:22px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.45);backdrop-filter:blur(6px);padding:7px 12px;border-radius:999px}
+.banner.r .tag{right:22px}.banner.l .tag{left:22px}
+
+.hero{padding:40px 0 80px}
+.intro{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;margin-top:36px}
+.intro p{font-size:19px;color:var(--mute)}
+.intro p strong{color:#fff}
+.intro .ctas{display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chips span{font-size:13px;font-weight:700;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.num{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px 24px 26px;position:relative;overflow:hidden}
+.num .v{font-weight:900;font-size:44px;line-height:1;letter-spacing:-.03em;margin-bottom:14px;display:inline-block}
+.num .v.hl{font-size:40px;transform:rotate(-2deg)}
+.num p{font-size:15px;color:var(--mute);line-height:1.45}
+.num .l{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--pink2);display:block;margin-bottom:18px}
+.ratio{margin-top:16px;border-radius:24px;padding:26px 30px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;background:linear-gradient(100deg,rgba(255,45,149,.2),rgba(255,45,149,.04));border:1px solid rgba(255,110,196,.35)}
+.ratio .x{font-weight:900;font-size:54px;line-height:1;letter-spacing:-.03em}
+.ratio p{flex:1;min-width:240px;color:var(--mute);font-size:16px}
+.ratio p b{color:#fff}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:32px}
+.card .n{width:44px;height:44px;border-radius:14px;background:var(--pink);display:grid;place-items:center;font-weight:900;font-size:18px;margin-bottom:22px;box-shadow:0 8px 24px var(--glow)}
+.card h3{font-weight:900;font-size:27px;line-height:1.15;letter-spacing:-.015em;margin-bottom:12px}
+.card p{color:var(--mute);font-size:16px;margin-bottom:18px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tags span{font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;background:rgba(255,45,149,.12);color:var(--pink2)}
+.src{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:26px 32px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.src > b{font-weight:900;font-size:20px;margin-right:6px}
+.src .s{display:flex;flex-direction:column;padding:10px 18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.src .s b{font-weight:800;font-size:16px}.src .s span{font-size:12px;color:var(--mute);font-weight:600}
+
+/* content banner section */
+.content-b{padding-top:20px}
+.content-b .under{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.content-b .under div{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px 26px}
+.content-b .under b{display:block;font-weight:900;font-size:20px;margin-bottom:6px}
+.content-b .under p{font-size:15px;color:var(--mute)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:44px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px 22px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:46px;height:46px;border-radius:50%;border:3px solid var(--pink2);box-shadow:0 0 16px var(--glow);font-weight:900;font-size:19px;margin-bottom:20px}
+.step h4{font-weight:800;font-size:18px;margin-bottom:8px}
+.step p{font-size:14px;color:var(--mute)}
+
+/* cases */
+.case{display:grid;grid-template-columns:.9fr 1.1fr;margin-top:44px;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.case .side{padding:40px;background:linear-gradient(150deg,var(--pink),#a0156a);display:flex;flex-direction:column;justify-content:center}
+.case .side .lb{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.case .side .big{font-weight:900;font-size:88px;line-height:1;letter-spacing:-.04em;margin:14px 0 10px}
+.case .side p{font-weight:600}
+.case .side .ph{outline-color:rgba(255,255,255,.85)}
+.case dl{padding:40px;display:grid;grid-template-columns:110px 1fr;gap:16px 22px}
+.case dt{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--pink2);padding-top:3px}
+.case dd{font-size:16px}
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.mini div{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px}
+.mini .r{font-weight:900;font-size:30px;margin:10px 0 4px;display:inline-block}
+.mini small{display:block;font-size:13px;color:var(--mute);font-weight:600}
+
+/* work */
+.work{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:44px}
+.frame{aspect-ratio:9/16;border-radius:20px;border:1px solid var(--line);background:radial-gradient(ellipse at 50% 30%,rgba(255,45,149,.2),transparent 65%),var(--card);padding:12px;display:flex;flex-direction:column;justify-content:space-between}
+.frame .t{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;align-self:flex-start;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:999px}
+.frame .c{font-size:12px;font-weight:700;color:var(--mute)}
+
+/* private chat */
+.private{display:grid;grid-template-columns:1fr 440px;gap:64px;align-items:center}
+.warn{margin-top:26px;padding:18px 20px;border:2px solid rgba(255,110,196,.45);background:rgba(255,45,149,.07);border-radius:18px;font-size:15px;color:var(--mute);max-width:560px}
+.warn b{color:#fff}
+.private .ctas{margin-top:26px}
+.chat{background:var(--bg2);border:1px solid var(--line);border-radius:30px;overflow:hidden;box-shadow:0 40px 120px -40px var(--glow)}
+.chat-top{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.chat-top img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:30% 25%}
+.chat-top .pic{position:relative;flex:none}
+.chat-top .pic::after{content:"";position:absolute;right:0;bottom:0;width:12px;height:12px;border-radius:50%;background:#3ee08f;border:2px solid var(--bg2)}
+.chat-top b{display:block;font-size:16px;font-weight:800}
+.chat-top span{font-size:12px;color:#3ee08f;font-weight:700}
+.chat-top .vip{margin-left:auto;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--pink);padding:5px 10px;border-radius:999px}
+.chat-body{padding:18px;min-height:430px;display:flex;flex-direction:column}
+.msg{max-width:82%;padding:11px 15px;border-radius:20px;font-size:15px;font-weight:600;line-height:1.4;margin-bottom:9px;opacity:0;transform:translateY(8px)}
+.msg.her{background:#2c1d2e;border-bottom-left-radius:6px;align-self:flex-start}
+.msg.you{background:var(--pink);border-bottom-right-radius:6px;align-self:flex-end}
+.msg .time{display:block;font-size:10px;opacity:.55;margin-top:3px;font-weight:600}
+.lock{align-self:flex-start;width:78%;aspect-ratio:4/3;border-radius:20px;border-bottom-left-radius:6px;position:relative;overflow:hidden;opacity:0;transform:translateY(8px);margin-bottom:9px}
+.lock img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:blur(16px) saturate(1.2);transform:scale(1.2)}
+.lock::after{content:"";position:absolute;inset:0;background:rgba(40,10,30,.35)}
+.lock a{position:absolute;inset:0;z-index:1;display:grid;place-content:center;justify-items:center;gap:10px;text-align:center;font-weight:900;font-size:17px}
+.lock .pill{font-size:12px;font-weight:800;background:var(--pink);padding:8px 14px;border-radius:999px;box-shadow:0 6px 20px var(--glow)}
+.typing{display:inline-flex;gap:4px;padding:13px 15px;background:#2c1d2e;border-radius:20px;border-bottom-left-radius:6px;align-self:flex-start;opacity:0}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--mute);animation:blink 1.2s infinite}
+.typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
+@keyframes blink{50%{opacity:.25}}
+.chat.go .msg,.chat.go .lock,.chat.go .typing{animation:in .45s forwards}
+.chat.go .s2{animation-delay:.7s}.chat.go .s3{animation-delay:1.5s}.chat.go .s4{animation-delay:2.3s}.chat.go .s5{animation-delay:3.1s}
+@keyframes in{to{opacity:1;transform:none}}
+.chat-in{padding:12px 14px;border-top:1px solid var(--line)}
+.chat-in span{display:block;font-size:14px;color:var(--mute);padding:11px 14px;border-radius:999px;background:var(--bg)}
+
+/* contact */
+.contact{padding:110px 0 130px}
+.contact .box{border-radius:32px;padding:60px;display:grid;grid-template-columns:1.2fr .8fr;gap:56px;background:linear-gradient(140deg,#2a1226,#1b0f1b);border:1px solid var(--line);position:relative;overflow:hidden}
+.contact .box::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--pink);filter:blur(140px);opacity:.25;right:-120px;top:-160px;pointer-events:none}
+.offer{margin:24px 0 28px;padding:16px 20px;border-radius:18px;background:rgba(255,45,149,.12);border:2px solid rgba(255,110,196,.4);font-weight:700}
+.send{list-style:none;position:relative;z-index:1}
+.send > b{display:block;font-weight:900;font-size:18px;margin-bottom:14px}
+.send li{padding:12px 16px;border-radius:14px;background:rgba(255,255,255,.05);margin-bottom:8px;font-weight:600;font-size:15px;display:flex;gap:10px;align-items:center}
+.send li::before{content:"✓";color:var(--pink2);font-weight:900}
+.meta{margin-top:18px;font-size:14px;color:var(--mute);font-weight:600}
+footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--mute);font-weight:600}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+.sticky{position:fixed;left:16px;right:16px;bottom:16px;z-index:30;display:none;transition:opacity .25s,transform .25s}
+.sticky.hide{opacity:0;pointer-events:none;transform:translateY(16px)}
+.sticky .btn{width:100%;justify-content:center}
+
+@media (max-width:1100px){
+  nav{display:none}
+  .nums{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .private{grid-template-columns:1fr;gap:48px}.chat{max-width:460px}
+  .work{grid-template-columns:repeat(3,1fr)}
+  .contact .box{grid-template-columns:1fr;padding:44px}
+  .intro{grid-template-columns:1fr}.intro .ctas{justify-content:flex-start}
+  .banner .txt{width:58%}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:72px 0}
+  .hero{padding:16px 0 60px}
+  .logo small{display:none}
+  header .btn span{display:none}
+  /* banners become vertical thumbnails: photo on top, text over the fade */
+  .banner{min-height:0;display:block;border-radius:24px}
+  .banner .photo{position:relative;width:100%;height:auto;aspect-ratio:1/1}
+  .banner.l .photo{object-position:65% 15%}
+  .banner::before{display:none}
+  .banner .txt,.banner.l .txt{width:100%;padding:0 20px 28px;margin:-150px 0 0;text-align:left;background:linear-gradient(180deg,rgba(28,13,24,0),#1c0d18 150px)}
+  .banner .txt{padding-top:110px}
+  .banner.r .big br:first-child{display:none}
+  .banner.l .sw{margin-left:0}
+  .banner .big{font-size:40px}
+  .banner .metric{font-size:30px}
+  .nums{gap:10px}.num{padding:22px 16px;border-radius:20px}.num .v{font-size:32px}.num .v.hl{font-size:28px}
+  .ratio{padding:22px}.ratio .x{font-size:42px}
+  .svc{grid-template-columns:1fr}.card{padding:26px 22px}
+  .src{padding:22px}
+  .content-b .under{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .case{grid-template-columns:1fr}.case .side,.case dl{padding:28px}
+  .case dl{grid-template-columns:1fr;gap:4px}.case dd{margin-bottom:14px}
+  .case .side .big{font-size:64px}
+  .mini{grid-template-columns:1fr}
+  .work{grid-template-columns:repeat(2,1fr)}
+  .contact .box{padding:30px 20px}
+  .sticky{display:block}
+}
+@media (prefers-reduced-motion:reduce){.msg,.lock,.typing{opacity:1!important;transform:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo"><i>♥</i><span class="ph">[Name]</span><small>· Creative Producer, AI Girlfriend</small></a>
+    <nav><a href="#numbers">Numbers</a><a href="#services">Services</a><a href="#cases">Cases</a><a href="#work">Work</a><a href="#private">18+</a></nav>
+    <a class="btn sm" href="https://t.me/your_handle" target="_blank" rel="noopener"><svg class="tg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.8c.9-.3 1.6.2 1.4 1.5z"/></svg><span>Telegram</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <figure class="bnr"><img src="img/banner-cac.webp" width="2048" height="1158" alt="Creatives that actually work — CAC $10–25"></figure>
+
+    <div class="intro">
+      <div>
+        <p>Hey, I'm <strong class="ph">[Name]</strong> — <strong>a creative producer for AI-adult and AI girlfriend products.</strong> I build creative + offer bundles that pass moderation, live longer and convert into profit.</p>
+        <div class="chips"><span>Meta / Instagram</span><span>Google / YouTube</span><span>TikTok</span><span>Native networks</span><span>Teaser networks</span></div>
+      </div>
+      <div class="ctas">
+        <a class="btn" href="https://t.me/your_handle" target="_blank" rel="noopener"><svg class="tg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.8c.9-.3 1.6.2 1.4 1.5z"/></svg>Message me</a>
+        <a class="btn ghost" href="#work">See the work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="numbers" style="padding-top:20px">
+  <div class="wrap">
+    <div class="k">Numbers</div>
+    <h2>Measured in <span class="pk">paying subscribers</span>, not likes.</h2>
+    <div class="nums">
+      <div class="num"><span class="l">CAC</span><span class="v hl">$10–25</span><p>average cost per user who bought a subscription</p></div>
+      <div class="num"><span class="l">LTV</span><span class="v">from $70</span><p>lifetime value of users who came through my content</p></div>
+      <div class="num"><span class="l">Volume</span><span class="v">5,000+</span><p>creatives made by me personally — statics and video</p></div>
+      <div class="num"><span class="l">Sources</span><span class="v">5</span><p>Meta, Google, TikTok, native and teaser networks — mainstream & adult</p></div>
+    </div>
+    <div class="ratio">
+      <div class="x">2.8×<span class="pk">+</span></div>
+      <p><b>LTV to CAC, even at the worst end.</b> $70 minimum LTV ÷ $25 maximum CAC = 2.8. At the best end it's 7×.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="k">Services</div>
+    <h2>Approaches that <span class="hl">pass review</span>, live longer and convert.</h2>
+    <div class="svc">
+      <div class="card"><div class="n">1</div><h3>Creative + offer bundles</h3><p>Concept, angle, creative and offer designed together for a specific source — not one creative cut for every network.</p><div class="tags"><span>concepts</span><span>hooks</span><span>offer angles</span><span>per-source</span></div></div>
+      <div class="card"><div class="n">2</div><h3>Moderation-proof approaches</h3><p>AI-adult is a restricted category. I find angles that get the click and still pass review — so creatives run longer before they burn out.</p><div class="tags"><span>policy-safe</span><span>longer lifespan</span><span>fewer rejections</span></div></div>
+      <div class="card"><div class="n">3</div><h3>Creative production</h3><p>5,000+ statics and videos made by me, end to end — plus many ad concepts — in the volume that testing needs.</p><div class="tags"><span>static</span><span>video</span><span>AI generation</span><span>winner iterations</span></div></div>
+      <div class="card"><div class="n">4</div><h3>Private content & AI series</h3><p>Content users pay for inside the product, and AI series with characters they come back to.</p><div class="tags"><span>private content</span><span>AI series</span><span>consistent characters</span></div></div>
+    </div>
+    <div class="src">
+      <b>Where it runs:</b>
+      <div class="s"><b>Meta</b><span>Facebook · Instagram</span></div>
+      <div class="s"><b>Google</b><span>Search · YouTube</span></div>
+      <div class="s"><b>TikTok</b><span>In-feed</span></div>
+      <div class="s"><b>Native</b><span>mainstream · adult</span></div>
+      <div class="s"><b>Teaser</b><span>mainstream · adult</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-b" id="content">
+  <div class="wrap">
+    <figure class="bnr"><img src="img/banner-ltv.webp" width="2048" height="1143" alt="Content people pay for — LTV from $70"></figure>
+    <div class="under">
+      <div><b>Private content</b><p>Paid content inside the product — what keeps a subscriber paying after the first month.</p></div>
+      <div><b>AI series</b><p>Episodic stories with consistent characters users come back for.</p></div>
+      <div><b>One face, everywhere</b><p>The girl in the ad is the girl in the app — no bait-and-switch, better retention.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="k">Process</div>
+    <h2>A bundle is a hypothesis. <span class="pk">The ad account decides.</span></h2>
+    <div class="steps">
+      <div class="step"><h4>Brief</h4><p>Product, geo, source, current CAC and what's been tried.</p></div>
+      <div class="step"><h4>Angles</h4><p>Approaches that fit the source's rules and the audience's desire.</p></div>
+      <div class="step"><h4>Production</h4><p>Statics and video in batches — several hooks per angle.</p></div>
+      <div class="step"><h4>Review & test</h4><p>Moderation first, then spend on the batch against CAC.</p></div>
+      <div class="step"><h4>Scale winners</h4><p>New hooks, formats and sources for what pays back.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="wrap">
+    <div class="k">Cases</div>
+    <h2>What it looked like <span class="hl">in the ad account</span></h2>
+    <div class="case">
+      <div class="side">
+        <span class="lb">Featured case</span>
+        <div class="big ph">$XX</div>
+        <p class="ph">CAC per paying subscriber · [source] · [geo]</p>
+      </div>
+      <dl>
+        <dt>Product</dt><dd class="ph">[AI girlfriend app / web — or "under NDA"]</dd>
+        <dt>Task</dt><dd class="ph">[What was wrong: bans, creatives burning out, CAC too high…]</dd>
+        <dt>Bundle</dt><dd class="ph">[Approach and offer; how many creatives tested to find the winner]</dd>
+        <dt>Result</dt><dd class="ph">[CAC, LTV, spend, lifespan of the winner, period]</dd>
+      </dl>
+    </div>
+    <div class="mini">
+      <div><small class="ph">[AI girlfriend · Tier-1 · Meta]</small><span class="r ph">CAC $XX</span><small class="ph">spend $XXK</small></div>
+      <div><small class="ph">[AI companion · Native]</small><span class="r ph">CAC $XX</span><small class="ph">spend $XXK</small></div>
+      <div><small class="ph">[AI adult · Teaser]</small><span class="r ph">LTV $XX</span><small class="ph">spend $XXK</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="k">Work</div>
+    <h2>A few creatives as a <span class="pk">technical demo</span></h2>
+    <p class="lead">Safe-for-work samples only. Sources and clients are hidden.</p>
+    <div class="work">
+      <div class="frame"><span class="t">video</span><span class="c ph">[creative 01]</span></div>
+      <div class="frame"><span class="t">video</span><span class="c ph">[creative 02]</span></div>
+      <div class="frame"><span class="t">static</span><span class="c ph">[creative 03]</span></div>
+      <div class="frame"><span class="t">AI series</span><span class="c ph">[episode still]</span></div>
+      <div class="frame"><span class="t">static</span><span class="c ph">[creative 05]</span></div>
+      <div class="frame"><span class="t">video</span><span class="c ph">[creative 06]</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="private">
+  <div class="wrap private">
+    <div>
+      <div class="k">Private · 18+</div>
+      <h2>The rest is <span class="hl">strictly 18+</span></h2>
+      <p class="lead">Private content, AI series and adult-network creatives aren't on this page. They live in a closed portfolio — I approve every request personally.</p>
+      <div class="warn"><b>18+ only.</b> By requesting access you confirm you are of legal age and agree to view adult content.</div>
+      <div class="ctas"><a class="btn" href="https://t.me/your_handle" target="_blank" rel="noopener">🔒 Request access</a></div>
+    </div>
+    <div class="chat" id="chat">
+      <div class="chat-top">
+        <div class="pic"><img src="img/girl-1.webp" alt=""></div>
+        <div><b>Mira</b><span>online</span></div>
+        <span class="vip">private</span>
+      </div>
+      <div class="chat-body">
+        <div class="msg her">hey, you scrolled all the way down 👀<span class="time">23:41</span></div>
+        <div class="msg you s2">show me the rest of the work<span class="time">23:41</span></div>
+        <div class="msg her s3">it's not for everyone… are you 18+?<span class="time">23:42</span></div>
+        <div class="lock s4"><img src="img/girl-2.webp" alt=""><a href="https://t.me/your_handle" target="_blank" rel="noopener">🔒 18+ portfolio<span class="pill">Request access in Telegram</span></a></div>
+        <div class="typing s5"><i></i><i></i><i></i></div>
+      </div>
+      <div class="chat-in" aria-hidden="true"><span>Message…</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="box">
+      <div style="position:relative;z-index:1">
+        <div class="k">Contact</div>
+        <h2>Need creatives that <span class="hl">pay back?</span></h2>
+        <p class="lead">AI girlfriend, AI companion and AI-adult products — full-time, retainer or project.</p>
+        <div class="offer">🎁 Free review of 3 of your current creatives: what I'd keep, kill and test next.</div>
+        <a class="btn" href="https://t.me/your_handle" target="_blank" rel="noopener"><svg class="tg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.8c.9-.3 1.6.2 1.4 1.5z"/></svg>Message me on Telegram</a>
+        <p class="meta">Reply within 24h · <span class="ph">@your_handle</span></p>
+      </div>
+      <ul class="send">
+        <b>Send me for a concrete answer:</b>
+        <li>Link to your product</li>
+        <li>Traffic sources you run</li>
+        <li>Target geo</li>
+        <li>Current CAC and LTV</li>
+        <li>3 creatives you run now</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 <span class="ph">[Name]</span></span><span>Creative Producer · AI Girlfriend · AI Companion</span></div></footer>
+
+<div class="sticky" id="sticky"><a class="btn" href="https://t.me/your_handle" target="_blank" rel="noopener">Message me on Telegram</a></div>
+
+<script>
+(function(){
+  var s=document.getElementById('sticky'), on=new Set();
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ e.isIntersecting?on.add(e.target):on.delete(e.target); });
+    s.classList.toggle('hide',on.size>0);
+  },{threshold:.12});
+  ['.hero','#contact','#private'].forEach(function(q){var el=document.querySelector(q); if(el) io.observe(el);});
+  var chat=document.getElementById('chat');
+  new IntersectionObserver(function(es,o){ if(es[0].isIntersecting){chat.classList.add('go'); o.disconnect();} },{threshold:.35}).observe(chat);
+})();
+</script>
+</body>
+</html>
