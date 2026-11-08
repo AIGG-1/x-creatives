@@ -64,10 +64,45 @@ section{padding:100px 0}
 h2{font-weight:900;font-size:clamp(34px,4.6vw,58px);line-height:1.08;letter-spacing:-.02em;max-width:900px;margin-bottom:20px}
 .lead{color:var(--mute);max-width:660px;font-size:18px}
 
+/* ===== hero + creative cards ===== */
+.hero-grid{display:grid;grid-template-columns:1fr 1.02fr;gap:64px;align-items:center}
+.hero h1{font-weight:900;font-size:clamp(40px,4.6vw,64px);line-height:1.08;letter-spacing:-.025em;margin-bottom:24px}
+.hero h1 .hl{margin:.04em 0}
+.hero .sub{font-size:18px;color:var(--mute);max-width:560px;margin-bottom:30px}
+.hero .sub strong{color:#fff}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.content-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:center}
+.list{list-style:none;margin-top:28px;display:grid;gap:12px}
+.list li{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 22px;display:grid;gap:4px}
+.list b{font-weight:900;font-size:18px}
+.list span{font-size:15px;color:var(--mute)}
+.ad{position:relative;margin:0;padding:14px}
+.ad-card{position:relative;z-index:1;background:#1d121d;border:1px solid #3a2840;border-radius:22px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.8),0 0 60px -20px var(--glow);transition:transform .35s ease}
+.ad.r .ad-card{transform:rotate(1.6deg)}
+.ad.l .ad-card{transform:rotate(-1.6deg)}
+.ad:hover .ad-card{transform:rotate(0) scale(1.01)}
+.ad-back{position:absolute;inset:14px;border-radius:22px;background:linear-gradient(135deg,var(--pink),#7a1fa8);opacity:.55}
+.ad.r .ad-back{transform:rotate(-4deg) translate(-10px,10px)}
+.ad.l .ad-back{transform:rotate(4deg) translate(10px,10px)}
+.ad-card img{width:100%;height:auto;display:block}
+.ad-top{display:flex;align-items:center;gap:10px;padding:12px 16px;font-size:13px}
+.ad-top i{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffc2dc,var(--pink) 50%,#7a1fa8)}
+.ad-top b{font-weight:800}
+.ad-top span{color:var(--mute);font-weight:600;margin-left:auto;font-size:12px}
+.ad-bot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;border-top:1px solid #3a2840;font-size:13px;color:var(--mute);font-weight:600}
+.ad-bot b{color:var(--pink2);font-weight:900;font-size:17px;white-space:nowrap}
+.sticker{position:absolute;z-index:2;font-size:13px;font-weight:800;background:#fff;color:#1a0612;padding:8px 14px;border-radius:999px;box-shadow:0 10px 24px rgba(0,0,0,.4)}
+.ad.r .sticker{left:24px;top:-24px;transform:rotate(-4deg)}
+.ad.l .sticker{right:24px;bottom:-24px;transform:rotate(4deg)}
 /* ===== banners ===== */
 .bnr{border-radius:28px;overflow:hidden;box-shadow:0 40px 100px -40px var(--glow);border:1px solid var(--line)}
 .bnr img{width:100%;height:auto}
-@media (max-width:760px){.bnr{border-radius:18px;margin:0 -4px}}
+@media (max-width:760px){
+  .hero h1{font-size:36px}
+  .ad{padding:8px}.ad-back{inset:8px}
+  .ad.r .sticker{left:16px;top:-26px}.ad.l .sticker{right:16px;bottom:-26px}
+  .ad{margin-top:18px}
+  .content-grid{gap:40px}.bnr{border-radius:18px;margin:0 -4px}}
 .banner{position:relative;border-radius:30px;overflow:hidden;min-height:600px;display:flex;align-items:center;box-shadow:0 40px 100px -40px var(--glow);isolation:isolate;background:#2a1a24}
 .banner .photo{position:absolute;top:0;bottom:0;width:58%;height:100%;object-fit:cover;z-index:-2}
 .banner.r .photo{right:0;object-position:30% 25%}
@@ -86,7 +121,7 @@ h2{font-weight:900;font-size:clamp(34px,4.6vw,58px);line-height:1.08;letter-spac
 .banner .tag{position:absolute;top:22px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.45);backdrop-filter:blur(6px);padding:7px 12px;border-radius:999px}
 .banner.r .tag{right:22px}.banner.l .tag{left:22px}
 
-.hero{padding:40px 0 80px}
+.hero{padding:70px 0 90px}
 .intro{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;margin-top:36px}
 .intro p{font-size:19px;color:var(--mute)}
 .intro p strong{color:#fff}
@@ -205,6 +240,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .sticky .btn{width:100%;justify-content:center}
 
 @media (max-width:1100px){
+  .hero-grid,.content-grid{grid-template-columns:1fr;gap:48px}
+  .ad{max-width:640px}
   nav{display:none}
   .nums{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:repeat(2,1fr)}
@@ -262,19 +299,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <main id="top">
 <section class="hero">
-  <div class="wrap">
-    <figure class="bnr"><img src="img/banner-cac.webp" width="2048" height="1158" alt="Creatives that actually work — CAC $10–25"></figure>
-
-    <div class="intro">
-      <div>
-        <p>Hey, I'm <strong class="ph">[Name]</strong> — <strong>a creative producer for AI-adult and AI girlfriend products.</strong> I build creative + offer bundles that pass moderation, live longer and convert into profit.</p>
-        <div class="chips"><span>Meta / Instagram</span><span>Google / YouTube</span><span>TikTok</span><span>Native networks</span><span>Teaser networks</span></div>
-      </div>
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <div class="k">Creative producer · AI girlfriend</div>
+      <h1>Ads for AI girlfriends that <span class="hl">pass review</span> and <span class="pk">pay back</span></h1>
+      <p class="sub">Hey, I'm <strong class="ph">[Name]</strong>. I build creative + offer bundles for AI-adult and AI girlfriend products — approaches that pass moderation, live longer and convert into profit.</p>
       <div class="ctas">
         <a class="btn" href="https://t.me/your_handle" target="_blank" rel="noopener"><svg class="tg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.8c.9-.3 1.6.2 1.4 1.5z"/></svg>Message me</a>
         <a class="btn ghost" href="#work">See the work</a>
       </div>
+      <div class="chips"><span>Meta / Instagram</span><span>Google / YouTube</span><span>TikTok</span><span>Native</span><span>Teaser</span></div>
     </div>
+    <figure class="ad r">
+      <div class="ad-back"></div>
+      <div class="ad-card">
+        <div class="ad-top"><i></i><b>AI Girlfriend</b><span>Sponsored</span></div>
+        <img src="img/banner-cac.webp" width="2048" height="1158" alt="My creative: Creatives that actually work — CAC $10–25">
+        <div class="ad-bot"><span>CAC per paying subscriber</span><b>$10–25</b></div>
+      </div>
+      <span class="sticker">one of my creatives ✦</span>
+    </figure>
   </div>
 </section>
 
@@ -317,12 +361,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 </section>
 
 <section class="content-b" id="content">
-  <div class="wrap">
-    <figure class="bnr"><img src="img/banner-ltv.webp" width="2048" height="1143" alt="Content people pay for — LTV from $70"></figure>
-    <div class="under">
-      <div><b>Private content</b><p>Paid content inside the product — what keeps a subscriber paying after the first month.</p></div>
-      <div><b>AI series</b><p>Episodic stories with consistent characters users come back for.</p></div>
-      <div><b>One face, everywhere</b><p>The girl in the ad is the girl in the app — no bait-and-switch, better retention.</p></div>
+  <div class="wrap content-grid">
+    <figure class="ad l">
+      <div class="ad-back"></div>
+      <div class="ad-card">
+        <div class="ad-top"><i></i><b>Private content</b><span>Paid</span></div>
+        <img src="img/banner-ltv.webp" width="2048" height="1143" alt="My creative: Content people pay for — LTV from $70" loading="lazy">
+        <div class="ad-bot"><span>Lifetime value of a paying user</span><b>from $70</b></div>
+      </div>
+      <span class="sticker">LTV ≥ 2.8× CAC ✦</span>
+    </figure>
+    <div>
+      <div class="k">Content</div>
+      <h2>Content people <span class="pk">pay for</span></h2>
+      <p class="lead">Ads bring the user in. Content keeps them paying.</p>
+      <ul class="list">
+        <li><b>Private content</b><span>Paid content inside the product — what keeps a subscriber paying after the first month.</span></li>
+        <li><b>AI series</b><span>Episodic stories with consistent characters users come back for.</span></li>
+        <li><b>One face, everywhere</b><span>The girl in the ad is the girl in the app — no bait-and-switch, better retention.</span></li>
+      </ul>
     </div>
   </div>
 </section>
