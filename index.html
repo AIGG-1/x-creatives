@@ -117,6 +117,32 @@ h2{font-weight:900;font-size:clamp(34px,4.6vw,58px);line-height:1.08;letter-spac
 .bb-out .o.hot{background:rgba(255,45,149,.12);border-color:rgba(255,110,196,.45)}
 .bb-out .o.hot b{font-size:30px;color:#fff;line-height:1.1}
 @media (max-width:1100px){.bb{grid-template-columns:1fr;gap:0}.bb-arrow{height:40px}.bb-arrow::before{left:50%;right:auto;top:6px;bottom:10px;width:3px;height:auto;background:linear-gradient(180deg,transparent,var(--pink2))}.bb-arrow::after{left:50%;right:auto;top:auto;bottom:9px;transform:translateX(-50%) rotate(135deg)}}
+/* ===== compact services + process ===== */
+section.tight{padding:72px 0}
+.svc2{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}
+.svc2 div{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 20px}
+.svc2 i{font-style:normal;font-weight:900;font-size:13px;color:var(--pink2);letter-spacing:.08em;display:block;margin-bottom:12px}
+.svc2 b{display:block;font-weight:900;font-size:19px;line-height:1.2;margin-bottom:8px}
+.svc2 span{font-size:14px;color:var(--mute);line-height:1.45}
+.src2{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:14px}
+.src2 b{font-weight:900;font-size:15px;margin-right:6px}
+.src2 span{font-size:13px;font-weight:700;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.src2 em{font-style:normal;font-size:13px;color:var(--mute);font-weight:600;margin-left:4px}
+.h2s{font-size:clamp(28px,3.4vw,42px)!important}
+.flow{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.flow li{position:relative;padding:20px 18px 20px 20px;border-right:1px solid var(--line)}
+.flow li:last-child{border-right:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-6px;top:50%;width:10px;height:10px;background:var(--card);border-top:1px solid var(--line);border-right:1px solid var(--line);transform:translateY(-50%) rotate(45deg);z-index:1}
+.flow i{font-style:normal;display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;border:2px solid var(--pink2);font-weight:900;font-size:13px;margin-bottom:10px;box-shadow:0 0 12px var(--glow)}
+.flow b{display:block;font-weight:800;font-size:16px}
+.flow span{font-size:13px;color:var(--mute)}
+@media (max-width:1100px){.svc2{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){
+ section.tight{padding:56px 0}
+ .svc2{grid-template-columns:1fr 1fr;gap:10px}.svc2 div{padding:16px 14px;border-radius:18px}.svc2 b{font-size:15px}.svc2 span{font-size:12.5px}
+ .flow{grid-template-columns:1fr}.flow li{display:grid;grid-template-columns:34px 1fr;column-gap:10px;align-items:center;padding:12px 16px;border-right:0;border-bottom:1px solid var(--line)}
+ .flow li:last-child{border-bottom:0}.flow li::after{display:none}.flow i{grid-row:span 2;margin:0}
+}
 /* ===== banners ===== */
 .bnr{border-radius:28px;overflow:hidden;box-shadow:0 40px 100px -40px var(--glow);border:1px solid var(--line)}
 .bnr img{width:100%;height:auto}
@@ -391,24 +417,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   </div>
 </section>
 
-<section id="services">
+<section id="services" class="tight">
   <div class="wrap">
     <div class="k">Services</div>
     <h2>Approaches that <span class="hl">pass review</span>, live longer and convert.</h2>
-    <div class="svc">
-      <div class="card"><div class="n">1</div><h3>Creative + landing bundles</h3><p>Concept, creative, landing and offer designed together for a specific source — the full path from the first frame to the paid subscription.</p><div class="tags"><span>concepts</span><span>hooks</span><span>landings</span><span>offer angles</span><span>per-source</span></div></div>
-      <div class="card"><div class="n">2</div><h3>Moderation-proof approaches</h3><p>AI-adult is a restricted category. My bundles get approved, run longer before they burn out and still convert — that's the know-how you hire me for.</p><div class="tags"><span>policy-safe</span><span>longer lifespan</span><span>fewer rejections</span></div></div>
-      <div class="card"><div class="n">3</div><h3>Creative production</h3><p>5,000+ statics and videos made by me, end to end — plus many ad concepts — in the volume that testing needs.</p><div class="tags"><span>static</span><span>video</span><span>AI generation</span><span>winner iterations</span></div></div>
-      <div class="card"><div class="n">4</div><h3>Private content & AI series</h3><p>Content users pay for inside the product, and AI series with characters they come back to.</p><div class="tags"><span>private content</span><span>AI series</span><span>consistent characters</span></div></div>
+    <div class="svc2">
+      <div><i>01</i><b>Creative + landing bundles</b><span>Built together for one source — from the first frame to the paid subscription.</span></div>
+      <div><i>02</i><b>Moderation-proof approaches</b><span>Approved, run longer before they burn out, still convert.</span></div>
+      <div><i>03</i><b>Creative production</b><span>5,000+ statics and videos, made by me in testing volume.</span></div>
+      <div><i>04</i><b>Private content &amp; AI series</b><span>Hyper-real characters users keep paying for.</span></div>
     </div>
-    <div class="src">
-      <b>Where it runs:</b>
-      <div class="s"><b>Meta</b><span>Facebook · Instagram</span></div>
-      <div class="s"><b>Google</b><span>Search · YouTube</span></div>
-      <div class="s"><b>TikTok</b><span>In-feed</span></div>
-      <div class="s"><b>Native</b><span>mainstream · adult</span></div>
-      <div class="s"><b>Teaser</b><span>mainstream · adult</span></div>
-    </div>
+    <div class="src2"><b>Runs on</b><span>Meta / Instagram</span><span>Google / YouTube</span><span>TikTok</span><span>Native</span><span>Teaser</span><em>mainstream &amp; adult</em></div>
   </div>
 </section>
 
@@ -464,17 +483,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   </div>
 </section>
 
-<section id="process">
+<section id="process" class="tight">
   <div class="wrap">
     <div class="k">Process</div>
-    <h2>A bundle is a hypothesis. <span class="pk">The ad account decides.</span></h2>
-    <div class="steps">
-      <div class="step"><h4>Brief</h4><p>Product, geo, source, current CAC and what's been tried.</p></div>
-      <div class="step"><h4>Bundle</h4><p>Creative, landing and offer built as one bundle for the chosen source.</p></div>
-      <div class="step"><h4>Production</h4><p>Statics, video and landings in batches — several hooks per angle.</p></div>
-      <div class="step"><h4>Review & test</h4><p>Moderation first, then spend on the batch against CAC.</p></div>
-      <div class="step"><h4>Scale winners</h4><p>New hooks, formats and sources for what pays back.</p></div>
-    </div>
+    <h2 class="h2s">A bundle is a hypothesis. <span class="pk">The ad account decides.</span></h2>
+    <ol class="flow">
+      <li><i>1</i><b>Brief</b><span>product, geo, source, CAC</span></li>
+      <li><i>2</i><b>Bundle</b><span>creative + landing + offer</span></li>
+      <li><i>3</i><b>Production</b><span>batches, several hooks</span></li>
+      <li><i>4</i><b>Review &amp; test</b><span>approve, then spend</span></li>
+      <li><i>5</i><b>Scale</b><span>iterate what pays back</span></li>
+    </ol>
   </div>
 </section>
 

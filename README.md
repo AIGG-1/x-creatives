@@ -14,3 +14,4 @@ Every change is saved as its own branch `version/vN`, so any version can be rest
 | v4 | Approach block reworked into a "black box" (you bring → locked bundle → you get): shows results, not the method. Method hints removed from services and process. |
 | v5 | Numbers block → "Two roles · one person": creative producer (CAC $10–25, 5,000+, 5 sources) and content creator (LTV from $70, hyper-real characters, 18+). Hero kicker, intro and logo mention both roles. |
 | v6 | Hero card: sticker "feels better than real", header "AI character · Generated" (no longer presented as a real ad). |
+| v7 | Services and Process compacted: services as a 4-tile grid with one-line descriptions, sources as one row, process as a single 5-step strip (mobile: 22.1 → 18.6 screens). |
